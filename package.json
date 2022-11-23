@@ -34,7 +34,8 @@
   },
   "lint-staged": {
     "*.js": [
-      "node_modules/.bin/eslint --max-warnings=0",
+      "npm run lint",
+      "node_modules/.bin/@typescript-eslint --max-warnings=0",
       "prettier --write",
       "git add"
     ]
