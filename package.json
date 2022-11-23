@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack",
+    "lint":"eslint ./src",
     "test": "echo \"Error: no test specified\" && exit 1",
     "precommit": "lint-staged"
   },
@@ -33,7 +34,7 @@
   },
   "lint-staged": {
     "*.js": [
-      "npm run lint:fix",
+      "npm run lint",
       "node_modules/.bin/eslint --max-warnings=0",
       "prettier --write",
       "git add"
