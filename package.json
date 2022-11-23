@@ -28,11 +28,12 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit":"lint-staged"
+      "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {
     "*.js": [
+      "npm run lint:fix",
       "node_modules/.bin/eslint --max-warnings=0",
       "prettier --write",
       "git add"

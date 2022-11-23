@@ -1,6 +1,7 @@
 //import '/src/styles/app.css';
 //при работе комментить
 let a;
+let s;
 // const calc=document.querySelector('.calculator')
 // const result=document.querySelector('#result')
 
