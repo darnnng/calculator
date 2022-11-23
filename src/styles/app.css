@@ -1,0 +1,131 @@
+* {
+    font-family:Arial;
+    z-index:0;
+    background-color:rgb(215, 215, 236)
+}
+
+.theme-bt {
+    position: absolute;
+    top:20px;
+    left:20px;
+    color:white;
+    border:none;
+}
+
+.theme-btn-text {
+    font-size: 18px;
+}
+
+.iconsun {
+    background-color:transparent;
+}
+
+.iconsun:hover {
+    cursor: pointer;
+    transition: 0.5s;
+    filter: invert(6%) sepia(75%) saturate(68%) hue-rotate(7deg) brightness(32%) contrast(67%);
+  }
+
+.calculator {
+    z-index:10;
+    margin:100px auto;
+    width:650px;
+    height:500px;
+    border-radius: 20px;
+    background: #000;
+    color:#fff;
+    padding:20px;
+}
+
+.screen {
+    background-color:black;
+    height:100px;
+    padding:10px;
+    text-align: right;
+    margin-bottom:20px;
+}
+
+/* .screen p {
+    border-radius:8px;
+    padding: 5px;
+    padding-right: 10px;
+    font-size:3rem;
+    background: gray;
+} */
+
+.screen div {
+    border-radius:8px;
+    padding: 5px;
+    padding-right: 10px;
+    font-size:3rem;
+    background: gray;
+}
+
+#result {
+    height: 3rem;
+}
+
+#previous {
+    background: rgb(52, 52, 52);
+    font-size:1.5rem;
+    height: 1.5rem;
+}
+
+.btn {
+    color:#fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:1.3rem;
+    user-select:none;
+    width:65px;
+    height:65px;
+    background:#333;
+    border-radius:8px;
+    text-align:center;
+    line-height:60px;
+    cursor:pointer;
+}
+
+.buttons {
+    background-color:#000;
+    display:grid;
+    grid-template-areas:
+    "mc squareroot square ac plus-minus percent division"
+    "mplus cuberoot cube seven eight nine multiply"
+    "mminus xyroot xy four five six minus"
+    "mr factorial 10x one two three plus"
+    "returnbt returnbt 1xdivision zero zero dot equal";
+    justify-items:center;
+    grid-gap:10px;
+}
+
+.btn.zero {
+    grid-area:zero;
+    width:95%;
+    border-radius:8px;
+}
+
+.btn.black-bt {
+    grid-area:returnbt;
+    width:95%;
+
+
+}
+
+.btn.grey-bt {
+    background:rgb(162, 160, 160)
+}
+
+.btn.orange-bt {
+    background:#f9a229;
+}
+
+.btn:hover {
+    background-color:rgb(68, 68, 68);
+    transition: 0.2s;
+}
+
+.btn:active {
+    background-color:rgb(68, 68, 68);
+}
