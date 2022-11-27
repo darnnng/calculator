@@ -1,7 +1,27 @@
 * {
     font-family:Arial;
     z-index:0;
+    /*background-color:rgb(215, 215, 236)*/
+}
+
+html {
     background-color:rgb(215, 215, 236)
+}
+
+html.light-theme {
+    background-color:#093635;
+}
+
+.current-operand.light-theme {
+    background-color:#8c9a9a;
+}
+
+.previous-operand {
+    margin-bottom:10px;
+}
+
+.previous-operand.light-theme {
+    background-color:#5a6c64;
 }
 
 .theme-bt {
@@ -16,6 +36,7 @@
     font-size: 18px;
 }
 
+
 .iconsun {
     background-color:transparent;
 }
@@ -28,7 +49,7 @@
 
 .calculator {
     z-index:10;
-    margin:100px auto;
+    margin:85px auto;
     width:650px;
     height:500px;
     border-radius: 20px;
@@ -37,12 +58,20 @@
     padding:20px;
 }
 
+.calculator.light-theme {
+    background-color:rgb(37, 35, 35);
+}
+
 .screen {
     background-color:black;
     height:100px;
     padding:10px;
     text-align: right;
     margin-bottom:20px;
+}
+
+.screen.light-theme {
+    background-color:rgb(37, 35, 35);
 }
 
 /* .screen p {
@@ -85,6 +114,7 @@
     text-align:center;
     line-height:60px;
     cursor:pointer;
+    border:none;
 }
 
 .buttons {
@@ -95,9 +125,18 @@
     "mplus cuberoot cube seven eight nine multiply"
     "mminus xyroot xy four five six minus"
     "mr factorial 10x one two three plus"
-    "returnbt returnbt 1xdivision zero zero dot equal";
+    "returnbt log 1xdivision zero zero dot equal";
     justify-items:center;
     grid-gap:10px;
+}
+
+
+div.buttons.light-theme {
+    background-color:rgb(37, 35, 35);
+}
+
+.btn.light-theme {
+    border:none;
 }
 
 .btn.zero {
@@ -108,17 +147,24 @@
 
 .btn.black-bt {
     grid-area:returnbt;
-    width:95%;
+    width:80%;
+}
 
-
+.btn.log {
+    grid-area:log;
+    width:80%;
 }
 
 .btn.grey-bt {
     background:rgb(162, 160, 160)
 }
 
-.btn.orange-bt {
+.orange-bt {
     background:#f9a229;
+}
+
+.orange-bt.light-theme {
+    background-color:#c06021;
 }
 
 .btn:hover {
