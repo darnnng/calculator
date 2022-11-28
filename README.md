@@ -25,3 +25,4 @@ It consists of public folder with index.html file, styles folder with .css file 
 In the app folder there is "commands" folder with .js files of commands for each button, <br>
 "operations" folder with .js files of all math functions. <br>
 In the root directory there is folder "tests" in which tests for math fucntions are stored. <br>
+
