@@ -1,9 +1,9 @@
 const path = require('path');
-const HtmlWebpackPlugin=require('html-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  mode:'production',
-  entry: './src/app/index.js',
+  mode: 'production',
+  entry: './src/app/main.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'calculator.js',
@@ -12,18 +12,17 @@ module.exports = {
   // watchOptions:{
   //   ignored:[/node_modules/],
   // },
-  module : {
-    rules:[
+  module: {
+    rules: [
       {
         test: /\.css$/i,
-        use: ["style-loader", "css-loader"]
+        use: ['style-loader', 'css-loader'],
       },
-    ]
+    ],
   },
-  plugins:[
+  plugins: [
     new HtmlWebpackPlugin({
-      template:'./src/public/index.html'
+      template: './src/public/index.html',
     }),
-  ]
+  ],
 };
-
