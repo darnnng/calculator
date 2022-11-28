@@ -1,4 +1,4 @@
-//import '/src/styles/app.css';
+import '/src/styles/app.css';
 import { Calculator } from './Calculator.js';
 import { PercentCommand } from './commands/percentCommand.js';
 import { FactorialCommand } from './commands/factorialCommand.js';
