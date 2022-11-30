@@ -1,8 +1,8 @@
-export class Calculator{
-  constructor(prev = 0, current = 0){
-    this.previousValue = prev
-    this.currentValue = current
-    this.history = []
+export class Calculator {
+  constructor(prev = 0, current = 0) {
+    this.previousValue = prev;
+    this.currentValue = current;
+    this.history = [];
   }
 
   executeCommand(command) {
@@ -11,7 +11,10 @@ export class Calculator{
   }
 
   undo() {
-    if (!this.history.length) {this.value = 0; return; }
+    if (!this.history.length) {
+      this.value = 0;
+      return;
+    }
     const command = this.history.pop();
     this.value = command.undo();
   }
