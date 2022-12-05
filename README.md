@@ -1,5 +1,7 @@
 # Science-calculator
 
+https://calculator-darnnng.netlify.app/
+
 ## Description
 
 Science calculator with different functions (degrees, roots, memory functions). There is an ability
