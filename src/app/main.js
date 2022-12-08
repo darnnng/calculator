@@ -11,6 +11,7 @@ import { TenInDegreeCommand } from './commands/tenInDegreeCommand.js';
 import { PlusMinusCommand } from './commands/plusMinusCommand.js';
 import { EqualCommand } from './commands/equalCommand.js';
 import { MCommand } from './commands/MCommand.js';
+import { changeTheme } from './changetheme.js';
 
 const numberButtons = document.querySelectorAll('[data-number]');
 const operationsButtons = document.querySelectorAll('[data-operations]');
@@ -21,9 +22,7 @@ const deleteButton = document.querySelector('[data-delete]');
 const clearButton = document.querySelector('[data-clear]');
 const delButton = document.querySelector('[data-log]');
 let equalTap = false;
-let activeTheme = 'dark';
 const theme = document.querySelector('.light-dark');
-const changingClasses = ['html', '.calculator', '.screen', '.buttons', '.btn'];
 const previousOperandTextElement = document.querySelector(
   '[data-previous-operand]'
 );
@@ -37,20 +36,8 @@ const calculator = new Calculator(
   currentOperandTextElement
 );
 
+changeTheme();
 theme.addEventListener('click', changeTheme);
-
-const changingElements = changingClasses.map((el) =>
-  document.querySelectorAll(el)
-);
-function changeTheme() {
-  activeTheme = activeTheme === 'dark' ? 'light' : 'dark';
-  toggleTheme(changingElements);
-}
-function toggleTheme(elements) {
-  elements.forEach((el) =>
-    el.forEach((el2) => el2.classList.toggle('light-theme'))
-  );
-}
 
 numberButtons.forEach((button) => {
   button.addEventListener('click', () => {
